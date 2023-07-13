@@ -2,9 +2,31 @@
 nav {
   font-size: 18px;
 }
-nav div a img {
+nav div img {
   width: 60px;
   height: 60px;
+  margin-left: 8px;
+}
+nav div h1 {
+  margin-left: 10px;
+  color: #52008d;
+}
+nav div div ul li a {
+  margin-left: 24px;
+}
+
+main {
+  margin: 96px auto;
+  height: 75%;
+  width: 75%;
+}
+main div div img {
+  position: relative;
+}
+main div div h2 {
+  position: absolute;
+  top: 300px;
+  right: 120px;
 }
 
 * {
