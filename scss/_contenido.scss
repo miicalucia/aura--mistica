@@ -1,5 +1,5 @@
 main {
-    margin: 96px auto;
+    margin: 80px auto auto auto;
 
     div {
         div {
@@ -7,13 +7,32 @@ main {
                 position: relative;
             }
             h2 {
+                width: 219px;
+                height: 50px;
                 position: absolute;
-                top: 10%;
-                right: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 29%;
+                right: 60px;
                 color: $lililla;
                 font-weight: bold;
-                font-size: 280px;
+                font-size: 60px;
             }
         }
+    }
+}
+
+#contenedorProductos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        font-size: 24px;
+        
+    }
+    .imgProductos{
+        width: 60px;
+        height: 60px;
     }
 }

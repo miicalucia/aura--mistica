@@ -1,34 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 nav {
-  font-size: 18px;
+  font-size: 24px;
 }
 nav div img {
   width: 60px;
   height: 60px;
-  margin-left: 8px;
 }
 nav div h1 {
-  margin-left: 10px;
-  color: #52008d;
-  font-size: 24px;
+  color: #210e30;
+  font-size: 32px;
 }
 nav div div ul li a {
   margin-left: 24px;
 }
 
 main {
-  margin: 96px auto;
+  margin: 80px auto auto auto;
 }
 main div div img {
   position: relative;
 }
 main div div h2 {
+  width: 219px;
+  height: 50px;
   position: absolute;
-  top: 10%;
-  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 29%;
+  right: 60px;
   color: #ede3f2;
   font-weight: bold;
-  font-size: 280px;
+  font-size: 60px;
+}
+
+#contenedorProductos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contenedorProductos h2 {
+  font-size: 24px;
+}
+#contenedorProductos .imgProductos {
+  width: 60px;
+  height: 60px;
 }
 
 * {
@@ -41,7 +57,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Amatic SC", cursive;
   color: #210e30;
   background-color: #f6f1f9;
 }
