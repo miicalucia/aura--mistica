@@ -96,7 +96,11 @@ main {
                 #cuerpoCard {
 
                     #botonCarrito {
-                        @include botones;
+                        border-radius: 6px;
+                        background-color: $fondolila;
+                        border: solid $indigo 1px;
+                        padding: 6px;
+                        font-size: 14px;
                     }
 
                     #botonCarrito:active {
@@ -124,4 +128,27 @@ main {
         background-color: $lila;
         color: $indigo;
     }
+}
+
+#reforestacion {
+    margin: 16px;
+    border-top: 1px solid $indigo;
+    border-bottom: 1px solid $indigo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h2 {
+            margin: 16px 0px;
+            padding: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        iframe {
+            margin: 16px 0px;
+            width: 100%;
+        }
 }

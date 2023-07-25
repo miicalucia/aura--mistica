@@ -38,10 +38,26 @@ const mostrarProductos = () => {
                             </div>`
         contenedorProductos.appendChild(card);
 
-        //Agregar productos al carrito
+        //Agregar productos al carrito 
+        //y Toastify
+
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener("click", () => {
-            agregarAlCarrito(producto.id);
+            agregarAlCarrito(producto.id)
+            Toastify({
+                text: "Producto agregado",
+                duration: 3000,
+                gravity: "bottom",
+                offset: {
+                    x: 100,
+                    y: 10
+                },
+                style: {
+                    background: "#c8add9",
+                    color: "#52008d",
+                    opacity: 10,
+                },
+                }).showToast();;
         })
     })
 }
@@ -88,7 +104,9 @@ const mostrarCarrito = () => {
                                 delete
                                 </span></button>
                             </div>
-                        </div>`
+                        </div>
+                        `
+        ;
         contenedorCarrito.appendChild(cardCarrito);
 
         //Eliminar productos del carrito:
@@ -129,6 +147,7 @@ const eliminarTodo = () => {
 const total = document.getElementById("total");
 
 const calcularTotal = () => {
+    let envioGratis = 5000;
     let totalCompra = 0;
     carrito.forEach(producto => {
         totalCompra += producto.precio * producto.cantidad;
