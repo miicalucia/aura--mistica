@@ -36,9 +36,9 @@ const mostrarProductos = () => {
                                     <button id="boton${producto.id}">Agregar al carrito</button>
                                 </div>
                             </div>`
-    contenedorProductos.appendChild(card);
+        contenedorProductos.appendChild(card);
 
-    //Agregar productos al carrito
+        //Agregar productos al carrito
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener("click", () => {
             agregarAlCarrito(producto.id);
@@ -48,9 +48,11 @@ const mostrarProductos = () => {
 
 mostrarProductos();
 
+//Función agregar al carrito
+
 const agregarAlCarrito = (id) => {
     const productoEnCarrito = carrito.find(producto => producto.id === id);
-    if(productoEnCarrito) {
+    if (productoEnCarrito) {
         productoEnCarrito.cantidad++;
     } else {
         const producto = productos.find(producto => producto.id === id);
@@ -74,23 +76,25 @@ verCarrito.addEventListener("click", () => {
 const mostrarCarrito = () => {
     contenedorCarrito.innerHTML = "";
     carrito.forEach(producto => {
-        const card = document.createElement("div");
-        card.innerHTML = `
-                        <div class="card">
+        const cardCarrito = document.createElement("div");
+        cardCarrito.innerHTML = `
+                        <div class="cardCarrito">
                             <img class="imgProductos" src="${producto.img}" alt"${producto.nombre}">
                             <div class="cuerpoCard">
-                                <h3>${producto.nombre}</h3>
-                                <p>$${producto.precio}</p>
-                                <p>${producto.cantidad}</p>
-                                <button id="eliminar${producto.id}"><span class="material-symbols-outlined">
+                                <h3 class="m-2">${producto.nombre}</h3>
+                                <p class="m-2">$${producto.precio}</p>
+                                <p class="m-2">${producto.cantidad}</p>
+                                <button class="m-2" id="eliminar${producto.id}"><span class="material-symbols-outlined">
                                 delete
                                 </span></button>
                             </div>
                         </div>`
-        contenedorCarrito.appendChild(card);
+        contenedorCarrito.appendChild(cardCarrito);
+
         //Eliminar productos del carrito:
-        const boton = document.getElementById(`eliminar${producto.id}`);
-        boton.addEventListener("click", () => {
+        const botonCarrito = document.getElementById(`eliminar${producto.id}`);
+        botonCarrito.id = "botonCarrito";
+        botonCarrito.addEventListener("click", () => {
             eliminarDelCarrito(producto.id);
         })
     })
@@ -126,5 +130,8 @@ const total = document.getElementById("total");
 
 const calcularTotal = () => {
     let totalCompra = 0;
-    carrito.forEach
+    carrito.forEach(producto => {
+        totalCompra += producto.precio * producto.cantidad;
+    })
+    total.innerHTML = `Total: $${totalCompra}`;
 }

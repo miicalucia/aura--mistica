@@ -85,6 +85,43 @@ main div div h2 {
   color: #52008d;
 }
 
+#carritoDeCompras #contenedorCarrito div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+}
+#carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito {
+  border-radius: 6px;
+  background-color: #f6f1f9;
+  border: solid #52008d 1px;
+  padding: 6px;
+  font-size: 14px;
+}
+#carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito:active {
+  background-color: #c8add9;
+  color: #52008d;
+}
+#carritoDeCompras #total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+  padding-right: 8px;
+}
+#carritoDeCompras #vaciarCarrito {
+  border-radius: 6px;
+  background-color: #f6f1f9;
+  border: solid #52008d 1px;
+  padding: 6px;
+  font-size: 14px;
+  margin: 8px;
+}
+#carritoDeCompras #vaciarCarrito:active {
+  background-color: #c8add9;
+  color: #52008d;
+}
+
 * {
   padding: 0;
   margin: 0;

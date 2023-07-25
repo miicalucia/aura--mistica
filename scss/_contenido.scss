@@ -59,6 +59,7 @@ main {
 
         .cuerpoCard {
             margin: 8px;
+
             h3 {
                 font-size: 18px;
             }
@@ -68,17 +69,59 @@ main {
             }
 
             button {
-                border-radius: 6px;
-                background-color: $fondolila;
-                border: solid $indigo 1px;
-                padding: 6px;
-                font-size: 14px;
+                @include botones;
             }
 
-            button:active{
+            button:active {
                 background-color: $lila;
                 color: $indigo;
             }
         }
+    }
+}
+
+#carritoDeCompras {
+
+    #contenedorCarrito {
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 8px;
+
+            #cardCarrito {
+
+                #cuerpoCard {
+
+                    #botonCarrito {
+                        @include botones;
+                    }
+
+                    #botonCarrito:active {
+                        background-color: $lila;
+                        color: $indigo;
+                    }
+                }
+            }
+        }
+    }
+
+    #total {
+        display: flex;
+        justify-content: flex-end;
+        margin: 8px;
+        padding-right: 8px;
+    }
+
+    #vaciarCarrito {
+        @include botones;
+        margin: 8px;
+    }
+
+    #vaciarCarrito:active {
+        background-color: $lila;
+        color: $indigo;
     }
 }
