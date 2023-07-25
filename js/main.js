@@ -27,14 +27,13 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 const mostrarProductos = () => {
     productos.forEach(producto => {
         const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-6", "col-sm-12");
         card.innerHTML = `
-                            <div clas="card">
-                                <img class="class-img-tom imgProductos" src="${producto.img}" alt"${producto.nombre}">
-                                <div class="card-body">
+                            <div class="card">
+                                <img class="imgProductos" src="${producto.img}" alt"${producto.nombre}">
+                                <div class="cuerpoCard">
                                     <h3>${producto.nombre}</h3>
-                                    <p>${producto.precio}</p>
-                                    <button class="btn colorBoton" id="boton${producto.id}">Agregar al carrito</button>
+                                    <p>$${producto.precio}</p>
+                                    <button id="boton${producto.id}">Agregar al carrito</button>
                                 </div>
                             </div>`
     contenedorProductos.appendChild(card);
@@ -48,3 +47,84 @@ const mostrarProductos = () => {
 }
 
 mostrarProductos();
+
+const agregarAlCarrito = (id) => {
+    const productoEnCarrito = carrito.find(producto => producto.id === id);
+    if(productoEnCarrito) {
+        productoEnCarrito.cantidad++;
+    } else {
+        const producto = productos.find(producto => producto.id === id);
+        carrito.push(producto);
+    }
+
+    calcularTotal();
+}
+
+//Mostrar el carrito de compras
+
+const verCarrito = document.getElementById("verCarrito");
+const contenedorCarrito = document.getElementById("contenedorCarrito");
+
+verCarrito.addEventListener("click", () => {
+    mostrarCarrito();
+})
+
+//Función para mostrar carrito:
+
+const mostrarCarrito = () => {
+    contenedorCarrito.innerHTML = "";
+    carrito.forEach(producto => {
+        const card = document.createElement("div");
+        card.innerHTML = `
+                        <div class="card">
+                            <img class="imgProductos" src="${producto.img}" alt"${producto.nombre}">
+                            <div class="cuerpoCard">
+                                <h3>${producto.nombre}</h3>
+                                <p>$${producto.precio}</p>
+                                <p>${producto.cantidad}</p>
+                                <button id="eliminar${producto.id}"><span class="material-symbols-outlined">
+                                delete
+                                </span></button>
+                            </div>
+                        </div>`
+        contenedorCarrito.appendChild(card);
+        //Eliminar productos del carrito:
+        const boton = document.getElementById(`eliminar${producto.id}`);
+        boton.addEventListener("click", () => {
+            eliminarDelCarrito(producto.id);
+        })
+    })
+    calcularTotal();
+}
+
+//Función que elimina producto del carrito
+
+const eliminarDelCarrito = (id) => {
+    const producto = carrito.find(producto => producto.id === id);
+    let indice = carrito.indexOf(producto);
+    carrito.splice(indice, 1);
+    mostrarCarrito();
+}
+
+//Vaciar carrito
+
+const vaciarCarrito = document.getElementById("vaciarCarrito");
+vaciarCarrito.addEventListener("click", () => {
+    eliminarTodo();
+})
+
+//Funcion eliminar Todo 
+
+const eliminarTodo = () => {
+    carrito = [];
+    mostrarCarrito();
+}
+
+//Muestro mensaje con el total de la compra
+
+const total = document.getElementById("total");
+
+const calcularTotal = () => {
+    let totalCompra = 0;
+    carrito.forEach
+}

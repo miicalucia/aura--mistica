@@ -1,50 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway&display=swap");
 nav {
-  font-size: 24px;
+  font-size: 18px;
 }
 nav div img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 nav div h1 {
   color: #210e30;
   font-size: 32px;
+  font-weight: bold;
+  font-family: "Amatic SC", cursive;
+}
+nav div div div div h2 {
+  font-size: 22px;
 }
 nav div div ul li a {
-  margin-left: 24px;
+  margin: 6px;
 }
 
 main {
-  margin: 80px auto auto auto;
+  margin: 71px auto auto auto;
 }
 main div div img {
   position: relative;
 }
 main div div h2 {
-  width: 219px;
-  height: 50px;
+  width: 221px;
+  height: 52px;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 29%;
-  right: 60px;
+  top: 34%;
+  right: 64px;
   color: #ede3f2;
   font-weight: bold;
   font-size: 60px;
 }
 
 #contenedorProductos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  gap: 1px;
+  grid-template-areas: "titulo titulo" "envio envio" "card card";
 }
 #contenedorProductos h2 {
-  font-size: 24px;
+  font-size: 28px;
+  grid-area: titulo;
+  justify-self: center;
+  margin: 16px auto;
 }
-#contenedorProductos .imgProductos {
-  width: 60px;
-  height: 60px;
+#contenedorProductos p {
+  grid-area: envio;
+  justify-self: center;
+}
+#contenedorProductos .card {
+  grid-area: card;
+  display: grid;
+}
+#contenedorProductos .card .imgProductos {
+  margin: 8px;
+  justify-self: center;
+  width: 150px;
+  height: 150px;
+}
+#contenedorProductos .card .cuerpoCard {
+  margin: 8px;
+}
+#contenedorProductos .card .cuerpoCard h3 {
+  font-size: 18px;
+}
+#contenedorProductos .card .cuerpoCard p {
+  font-size: 22px;
+}
+#contenedorProductos .card .cuerpoCard button {
+  border-radius: 6px;
+  background-color: #f6f1f9;
+  border: solid #52008d 1px;
+  padding: 6px;
+  font-size: 14px;
+}
+#contenedorProductos .card .cuerpoCard button:active {
+  background-color: #c8add9;
+  color: #52008d;
 }
 
 * {
@@ -57,7 +95,7 @@ html {
 }
 
 body {
-  font-family: "Amatic SC", cursive;
+  font-family: "Raleway", sans-serif;
   color: #210e30;
   background-color: #f6f1f9;
 }
