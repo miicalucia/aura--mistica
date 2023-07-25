@@ -78,6 +78,7 @@ main div div h2 {
   border: solid #52008d 1px;
   padding: 6px;
   font-size: 14px;
+  color: #210e30;
 }
 #contenedorProductos .card .cuerpoCard button:active {
   background-color: #c8add9;
@@ -114,6 +115,7 @@ main div div h2 {
   border: solid #52008d 1px;
   padding: 6px;
   font-size: 14px;
+  color: #210e30;
   margin: 8px;
 }
 #carritoDeCompras #vaciarCarrito:active {
