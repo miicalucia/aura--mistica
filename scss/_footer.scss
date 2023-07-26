@@ -1,19 +1,47 @@
 footer {
-    background-color: $anegro;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/sahumerio.jpg);
+    background-repeat: round;
     color: $lila;
 
     h3 {
-        padding: 8px;
+        padding: 6px;
         font-size: 20px;
     }
 
     ul {
+        padding: 8px;
         li {
             list-style-type: none;
+
             a {
                 text-decoration: none;
                 color: $lila;
             }
+        }
+    }
+
+    .redesSociales {
+        display: grid;
+        
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+body {
+    div {
+        a {
+            display: block;
+            font-size: 45px;
+            text-decoration: none;
+            color: #25D366;
+            position: fixed;
+            z-index: 2;
+            bottom: 20px;
+            right: 20px;
+
         }
     }
 }
