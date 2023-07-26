@@ -1,0 +1,19 @@
+footer {
+    background-color: $anegro;
+    color: $lila;
+
+    h3 {
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    ul {
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                color: $lila;
+            }
+        }
+    }
+}

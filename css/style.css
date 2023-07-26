@@ -18,6 +18,22 @@ nav div div ul li a {
   margin: 6px;
 }
 
+footer {
+  background-color: #210e30;
+  color: #c8add9;
+}
+footer h3 {
+  padding: 8px;
+  font-size: 20px;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #c8add9;
+}
+
 main {
   margin: 71px auto auto auto;
 }
@@ -40,7 +56,7 @@ main div div h2 {
 
 #contenedorProductos {
   display: grid;
-  gap: 1px;
+  gap: 2px;
   grid-template-areas: "titulo titulo" "envio envio" "card card";
 }
 #contenedorProductos h2 {
