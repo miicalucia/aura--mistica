@@ -124,6 +124,24 @@ body #Whatsapp a {
   right: 20px;
 }
 
+@media (min-width: 600px) and (max-width: 1023px) {
+  footer {
+    height: 224px;
+  }
+  footer h3 {
+    padding: 16px;
+    font-size: 24px;
+  }
+  footer ul {
+    padding: 16px;
+  }
+  footer ul li a {
+    font-size: 18px;
+  }
+  footer p {
+    padding: 10px;
+  }
+}
 main {
   margin: 71px auto auto auto;
 }
@@ -214,6 +232,27 @@ main div div h2 {
   width: 100%;
 }
 
+@media (min-width: 600px) and (max-width: 1023px) {
+  #contenedorProductos h2 {
+    font-size: 32px;
+    margin: 24px auto;
+  }
+  #contenedorProductos p {
+    font-size: 18px;
+  }
+  #contenedorProductos .card {
+    padding: 16px;
+  }
+  #contenedorProductos .card .cuerpoCard {
+    justify-self: center;
+  }
+  #reforestacion h2 {
+    font-size: 28px;
+  }
+  #reforestacion iframe {
+    height: 40rem;
+  }
+}
 * {
   padding: 0;
   margin: 0;

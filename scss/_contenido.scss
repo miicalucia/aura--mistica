@@ -102,3 +102,33 @@ main {
             width: 100%;
         }
 }
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    #contenedorProductos { 
+        h2 {
+            font-size: 32px;
+            margin: 24px auto;
+        }
+        p {
+            font-size: 18px;
+        }
+
+        .card {
+            padding: 16px;
+
+            .cuerpoCard {
+                justify-self: center;
+
+            }
+        }
+    }
+
+    #reforestacion {
+        h2 {
+            font-size: 28px;
+        }
+        iframe {
+            height: 40rem;
+        }
+    }
+}
