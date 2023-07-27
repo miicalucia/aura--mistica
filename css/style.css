@@ -17,16 +17,29 @@ nav div #logoMarca h1 {
   font-size: 32px;
   font-family: "Amatic SC", cursive;
 }
-nav div #carritoDeCompras #contenedorCarrito div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 8px;
+nav div #carritoDeCompras #contenedorCarrito {
+  padding: 8px;
+}
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
 nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
   width: 80px;
   height: 80px;
+  margin: 4px;
+}
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+  display: grid;
+  grid-template-columns: 35% 35% 10% 15%;
+  align-items: center;
+  gap: 2px;
+}
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard h3 {
+  padding: 8px;
+}
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard p {
+  padding: 8px;
 }
 nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
   border-radius: 6px;
@@ -75,9 +88,15 @@ nav div #navbarNav ul li a {
     margin-left: 16px;
     font-size: 45px;
   }
-  nav div #carritoDeCompras #verCarrito {
+  nav div #carritoDeCompras button #verCarrito {
     font-size: 32px;
     margin: 8px;
+  }
+  nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+    display: grid;
+    grid-template-columns: 35% 35% 10% 20%;
+    align-items: center;
+    gap: 2px;
   }
   nav div button {
     margin: 8px;
