@@ -3,13 +3,50 @@ nav {
   font-size: 18px;
 }
 nav div img {
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
 }
 nav div h1 {
   color: #210e30;
   font-size: 32px;
   font-family: "Amatic SC", cursive;
+}
+nav div #carritoDeCompras #contenedorCarrito div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+}
+nav div #carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito {
+  border-radius: 6px;
+  background-color: #f6f1f9;
+  border: solid #52008d 1px;
+  padding: 6px;
+  font-size: 14px;
+}
+nav div #carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito:active {
+  background-color: #c8add9;
+  color: #52008d;
+}
+nav div #carritoDeCompras #total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+  padding-right: 8px;
+}
+nav div #carritoDeCompras #vaciarCarrito {
+  border-radius: 6px;
+  background-color: #f6f1f9;
+  border: solid #52008d 1px;
+  padding: 6px;
+  font-size: 14px;
+  color: #210e30;
+  margin: 8px;
+}
+nav div #carritoDeCompras #vaciarCarrito:active {
+  background-color: #c8add9;
+  color: #52008d;
 }
 nav div div div div h2 {
   font-size: 22px;
@@ -18,6 +55,22 @@ nav div div ul li a {
   margin: 6px;
 }
 
+@media (min-width: 600px) and (max-width: 1023px) {
+  nav div img {
+    width: 6rem;
+    height: 6rem;
+  }
+  nav div h1 {
+    font-size: 45px;
+  }
+  nav div #carritoDeCompras button #verCarrito {
+    font-size: 32px;
+  }
+  nav div button .navbar-toggler-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 footer {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/sahumerio.jpg);
   background-repeat: round;
@@ -44,7 +97,7 @@ footer p {
   text-align: center;
 }
 
-body div a {
+body #Whatsapp a {
   display: block;
   font-size: 45px;
   text-decoration: none;
@@ -118,44 +171,6 @@ main div div h2 {
   color: #210e30;
 }
 #contenedorProductos .card .cuerpoCard button:active {
-  background-color: #c8add9;
-  color: #52008d;
-}
-
-#carritoDeCompras #contenedorCarrito div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 8px;
-}
-#carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito {
-  border-radius: 6px;
-  background-color: #f6f1f9;
-  border: solid #52008d 1px;
-  padding: 6px;
-  font-size: 14px;
-}
-#carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito:active {
-  background-color: #c8add9;
-  color: #52008d;
-}
-#carritoDeCompras #total {
-  display: flex;
-  justify-content: flex-end;
-  margin: 8px;
-  padding-right: 8px;
-}
-#carritoDeCompras #vaciarCarrito {
-  border-radius: 6px;
-  background-color: #f6f1f9;
-  border: solid #52008d 1px;
-  padding: 6px;
-  font-size: 14px;
-  color: #210e30;
-  margin: 8px;
-}
-#carritoDeCompras #vaciarCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
