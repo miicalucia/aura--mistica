@@ -95,12 +95,12 @@ const mostrarCarrito = () => {
         const cardCarrito = document.createElement("div");
         cardCarrito.innerHTML = `
                         <div class="cardCarrito">
-                            <img class="imgProductos" src="${producto.img}" alt"${producto.nombre}">
+                            <img class="imgCarrito" src="${producto.img}" alt"${producto.nombre}">
                             <div class="cuerpoCard">
-                                <h3 class="m-2">${producto.nombre}</h3>
-                                <p class="m-2">$${producto.precio}</p>
-                                <p class="m-2">${producto.cantidad}</p>
-                                <button class="m-2" id="eliminar${producto.id}"><span class="material-symbols-outlined">
+                                <h3 class="m-3">${producto.nombre}</h3>
+                                <p class="m-3">$${producto.precio}</p>
+                                <p class="m-3">${producto.cantidad}</p>
+                                <button class="m-3" id="eliminar${producto.id}"><span class="material-symbols-outlined">
                                 delete
                                 </span></button>
                             </div>

@@ -2,39 +2,48 @@ nav {
     font-size: 18px;
 
     div {
-        img {
-            width: 5rem;
-            height: 5rem;
+        #logoMarca {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            h1 {
+                margin-left: 8px;
+                color: $anegro;
+                font-size: 32px;
+                font-family: $tipografia;
+            }
         }
 
-        h1 {
-            color: $anegro;
-            font-size: 32px;
-            font-family: $tipografia;
-        }
         #carritoDeCompras {
 
             #contenedorCarrito {
-        
+
                 div {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
                     margin: 8px;
-        
-                    #cardCarrito {
-        
-                        #cuerpoCard {
-        
+
+                    .cardCarrito {
+
+                        .imgCarrito {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        .cuerpoCard {
+
                             #botonCarrito {
-                                border-radius: 6px;
-                                background-color: $fondolila;
-                                border: solid $indigo 1px;
-                                padding: 6px;
-                                font-size: 14px;
+                                @include botones;
                             }
-        
+
                             #botonCarrito:active {
                                 background-color: $lila;
                                 color: $indigo;
@@ -43,24 +52,25 @@ nav {
                     }
                 }
             }
-        
+
             #total {
                 display: flex;
                 justify-content: flex-end;
                 margin: 8px;
                 padding-right: 8px;
             }
-        
+
             #vaciarCarrito {
                 @include botones;
                 margin: 8px;
             }
-        
+
             #vaciarCarrito:active {
                 background-color: $lila;
                 color: $indigo;
             }
         }
+
         div {
             div {
                 div {
@@ -70,11 +80,12 @@ nav {
                 }
             }
         }
-        div {
+
+        #navbarNav {
             ul {
                 li {
                     a {
-                       margin: 6px;
+                        margin: 6px;
                     }
                 }
             }
@@ -82,32 +93,42 @@ nav {
     }
 }
 
+
 @media (min-width: 600px) and (max-width: 1023px) {
     nav {
-        
         div {
-            img {
-                width: 6rem;
-                height: 6rem;
-            }
-        h1 {
-            font-size: 45px;
-        }
 
-        #carritoDeCompras {
-            button {
+            #logoMarca {
+                img {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                h1 {
+                    margin-left: 16px;
+                    font-size: 45px;
+                }
+            }
+
+
+            #carritoDeCompras {
+
                 #verCarrito {
                     font-size: 32px;
+                    margin: 8px;
+                }
+
+            }
+
+            button {
+                margin: 8px;
+
+                .navbar-toggler-icon {
+                    width: 3rem;
+                    height: 3rem;
+
                 }
             }
         }
-
-        button {
-            .navbar-toggler-icon {
-                width: 3rem;
-                height: 3rem;
-            }
-        }
     }
-}
 }

@@ -2,11 +2,17 @@
 nav {
   font-size: 18px;
 }
-nav div img {
-  width: 5rem;
-  height: 5rem;
+nav div #logoMarca {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-nav div h1 {
+nav div #logoMarca img {
+  width: 6rem;
+  height: 6rem;
+}
+nav div #logoMarca h1 {
+  margin-left: 8px;
   color: #210e30;
   font-size: 32px;
   font-family: "Amatic SC", cursive;
@@ -18,14 +24,19 @@ nav div #carritoDeCompras #contenedorCarrito div {
   justify-content: space-between;
   margin: 8px;
 }
-nav div #carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito {
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
+  width: 80px;
+  height: 80px;
+}
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
   border-radius: 6px;
   background-color: #f6f1f9;
   border: solid #52008d 1px;
   padding: 6px;
   font-size: 14px;
+  color: #210e30;
 }
-nav div #carritoDeCompras #contenedorCarrito div #cardCarrito #cuerpoCard #botonCarrito:active {
+nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
@@ -51,20 +62,25 @@ nav div #carritoDeCompras #vaciarCarrito:active {
 nav div div div div h2 {
   font-size: 22px;
 }
-nav div div ul li a {
+nav div #navbarNav ul li a {
   margin: 6px;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
-  nav div img {
+  nav div #logoMarca img {
     width: 6rem;
     height: 6rem;
   }
-  nav div h1 {
+  nav div #logoMarca h1 {
+    margin-left: 16px;
     font-size: 45px;
   }
-  nav div #carritoDeCompras button #verCarrito {
+  nav div #carritoDeCompras #verCarrito {
     font-size: 32px;
+    margin: 8px;
+  }
+  nav div button {
+    margin: 8px;
   }
   nav div button .navbar-toggler-icon {
     width: 3rem;
