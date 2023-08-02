@@ -106,6 +106,23 @@ nav div #navbarNav ul li a {
     height: 3rem;
   }
 }
+@media (min-width: 1024px) {
+  nav div #logoMarca img {
+    width: 6rem;
+    height: 6rem;
+  }
+  nav div #logoMarca h1 {
+    margin-left: 16px;
+    font-size: 45px;
+  }
+  nav div #carritoDeCompras {
+    display: none;
+  }
+  nav div #navbarNav ul li a {
+    margin: 10px;
+    font-size: 20px;
+  }
+}
 footer {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/sahumerio.jpg);
   background-repeat: round;
@@ -159,6 +176,24 @@ body #Whatsapp a {
   }
   footer p {
     padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  footer h3 {
+    margin-left: 16px;
+    font-size: 28px;
+  }
+  footer ul {
+    margin-left: 16px;
+  }
+  footer ul li a {
+    font-size: 20px;
   }
 }
 main {
@@ -270,6 +305,73 @@ main div div h2 {
   }
   #reforestacion iframe {
     height: 40rem;
+  }
+}
+@media (min-width: 1024px) {
+  #contenedorProductos {
+    display: grid;
+    gap: 8px;
+    grid-template-areas: "titulo titulo titulo titulo" "envio envio envio envio" "card card card card";
+  }
+  #contenedorProductos h2 {
+    font-size: 36px;
+    margin: 24px auto;
+  }
+  #contenedorProductos p {
+    font-size: 20px;
+  }
+  #contenedorProductos .card {
+    padding: 16px;
+    margin: 8px;
+  }
+  #contenedorProductos .card .imgProductos {
+    margin: 8px;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+  }
+  #contenedorProductos .card .cuerpoCard {
+    margin: 8px;
+    justify-self: center;
+  }
+  #contenedorProductos .card .cuerpoCard h3 {
+    font-size: 22px;
+  }
+  #contenedorProductos .card .cuerpoCard p {
+    font-size: 26 px;
+  }
+  #contenedorProductos .card .cuerpoCard button {
+    border-radius: 6px;
+    background-color: #f6f1f9;
+    border: solid #52008d 1px;
+    padding: 6px;
+    font-size: 14px;
+    color: #210e30;
+    font-size: 18px;
+  }
+  #contenedorProductos .card .cuerpoCard button:hover {
+    background-color: #c8add9;
+    color: #52008d;
+  }
+  #reforestacion {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "proyecto video" "descripcion video";
+    justify-items: center;
+  }
+  #reforestacion h2 {
+    grid-area: proyecto;
+    font-size: 30px;
+  }
+  #reforestacion p {
+    grid-area: descripcion;
+    font-size: 22px;
+    padding: 8px;
+  }
+  #reforestacion iframe {
+    grid-area: video;
+    width: 440px;
+    height: 245px;
   }
 }
 * {

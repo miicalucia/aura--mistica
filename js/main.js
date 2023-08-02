@@ -147,7 +147,7 @@ const eliminarTodo = () => {
 const total = document.getElementById("total");
 
 const calcularTotal = () => {
-    let envioGratis = 5000;
+   // let envioGratis = 5000;
     let totalCompra = 0;
     carrito.forEach(producto => {
         totalCompra += producto.precio * producto.cantidad;

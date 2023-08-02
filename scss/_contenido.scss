@@ -87,28 +87,32 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-        h2 {
-            margin: 16px 0px;
-            padding: 8px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        p {
-            text-align: center;
-            font-size: 18px;
-        }
-        iframe {
-            margin: 16px 0px;
-            width: 100%;
-        }
+
+    h2 {
+        margin: 16px 0px;
+        padding: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    iframe {
+        margin: 16px 0px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
-    #contenedorProductos { 
+    #contenedorProductos {
         h2 {
             font-size: 32px;
             margin: 24px auto;
         }
+
         p {
             font-size: 18px;
         }
@@ -127,8 +131,92 @@ main {
         h2 {
             font-size: 28px;
         }
+
         iframe {
             height: 40rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    #contenedorProductos {
+        display: grid;
+        gap: 8px;
+        grid-template-areas:
+            "titulo titulo titulo titulo"
+            "envio envio envio envio"
+            "card card card card"
+        ;
+
+        h2 {
+            font-size: 36px;
+            margin: 24px auto;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .card {
+            padding: 16px;
+            margin: 8px;
+
+            .imgProductos {
+                margin: 8px;
+                justify-self: center;
+                width: 300px;
+                height: 300px;
+            }
+
+            .cuerpoCard {
+                margin: 8px;
+                justify-self: center;
+
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 26 px;
+                }
+
+                button {
+                    @include botones;
+                    font-size: 18px;
+                }
+
+                button:hover {
+                    background-color: $lila;
+                    color: $indigo;
+                }
+            }
+        }
+    }
+
+    #reforestacion {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "proyecto video"
+        "descripcion video";
+        justify-items: center;
+
+        h2 {
+            grid-area: proyecto;
+            font-size: 30px;
+        }
+
+        p {
+            grid-area: descripcion;
+            font-size: 22px;
+            padding: 8px;   
+            
+        }
+
+        iframe {
+            grid-area: video;
+            width: 440px;
+            height: 245px;
         }
     }
 }

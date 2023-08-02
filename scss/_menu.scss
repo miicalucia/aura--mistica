@@ -159,3 +159,41 @@ nav {
         }
     }
 }
+
+@media (min-width: 1024px) {
+    
+    nav {
+        div {
+
+            #logoMarca {
+                img {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                h1 {
+                    margin-left: 16px;
+                    font-size: 45px;
+                }
+            }
+
+
+
+
+            #carritoDeCompras {
+                display: none;
+            }
+
+            #navbarNav {
+                ul {
+                    li {
+                        a {
+                            margin: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

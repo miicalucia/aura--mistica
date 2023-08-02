@@ -69,3 +69,26 @@ body {
         }
     }
 }
+
+@media (min-width: 1024px) {
+    footer {
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h3 {
+            margin-left: 16px;
+            font-size: 28px;
+        }
+
+        ul {
+            margin-left: 16px;
+            li {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
