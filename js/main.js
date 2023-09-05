@@ -17,6 +17,7 @@ items.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
 
+
 //CARROUSEL
 
 const grande = document.querySelector('.grande');

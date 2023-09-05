@@ -6,7 +6,7 @@ header {
     background-color: #fff;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 10;
 
     img {
         width: 5rem;
@@ -21,6 +21,7 @@ header {
             color: $colorTipografia;
         }
     }
+
 
     .abrirMenu,
     .cerrarMenu {
@@ -59,6 +60,7 @@ header {
             gap: 2rem;
 
             li {
+                font-size: 22px;
                 a {
                     text-decoration: none;
                     color: $colorTipografia;

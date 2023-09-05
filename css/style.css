@@ -7,7 +7,7 @@ header {
   background-color: #fff;
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 10;
 }
 header img {
   width: 5rem;
@@ -54,6 +54,9 @@ header .nav .navList {
   list-style-type: none;
   gap: 2rem;
 }
+header .nav .navList li {
+  font-size: 22px;
+}
 header .nav .navList li a {
   text-decoration: none;
   color: #210e30;
@@ -99,10 +102,7 @@ header .nav.visible {
 .carrousel {
   width: 100%;
   max-width: 120em;
-  margin-top: 16px;
   overflow-x: hidden;
-  border-radius: 8px;
-  box-shadow: 3px 3px 60px #bebebe, 3px 3px 60px #ffffff;
 }
 .carrousel .grande {
   width: 300%;
@@ -119,11 +119,9 @@ header .nav.visible {
   align-items: center;
 }
 .carrousel .grande div .img {
-  min-width: 90%;
+  min-width: 100%;
   width: calc(33.3333333333% - 2em);
   min-height: 163px;
-  padding-top: 0.5em;
-  border-radius: 16px;
 }
 .carrousel .grande div h2 {
   position: absolute;
@@ -131,6 +129,7 @@ header .nav.visible {
   color: #ede3f2;
   font-weight: bold;
   font-size: 60px;
+  letter-spacing: 1.5px;
 }
 
 .puntos {
@@ -155,61 +154,67 @@ header .nav.visible {
   background-color: #c8add9;
 }
 
-nav {
-  font-size: 18px;
+header #carritoDeCompras button #verCarrito {
+  background-color: #fff;
+  border: 0px;
 }
-nav #carritoDeCompras #contenedorCarrito {
+header #carritoDeCompras div div h2 {
+  font-size: 26px;
+}
+header #carritoDeCompras #contenedorCarrito {
   padding: 8px;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito {
   display: grid;
   grid-template-columns: 25% 75%;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
   width: 80px;
   height: 80px;
   margin: 4px;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
   display: grid;
   grid-template-columns: 35% 35% 10% 15%;
   align-items: center;
   gap: 2px;
+  font-size: 16px;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard h3 {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard h3 {
   padding: 8px;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard p {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard p {
   padding: 8px;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
   border-radius: 6px;
   background-color: #f6f1f9;
   border: solid #52008d 1px;
   padding: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #210e30;
 }
-nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito:active {
+header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
-nav #carritoDeCompras #total {
+header #carritoDeCompras #total {
   display: flex;
   justify-content: flex-end;
   margin: 8px;
   padding-right: 8px;
+  font-size: 26px;
 }
-nav #carritoDeCompras #vaciarCarrito {
+header #carritoDeCompras #vaciarCarrito {
   border-radius: 6px;
   background-color: #f6f1f9;
   border: solid #52008d 1px;
   padding: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #210e30;
   margin: 8px;
 }
-nav #carritoDeCompras #vaciarCarrito:active {
+header #carritoDeCompras #vaciarCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
@@ -367,7 +372,7 @@ main div div h2 {
   background-color: #f6f1f9;
   border: solid #52008d 1px;
   padding: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #210e30;
 }
 #contenedorProductos .card .cuerpoCard button:active {
@@ -457,7 +462,7 @@ main div div h2 {
     background-color: #f6f1f9;
     border: solid #52008d 1px;
     padding: 6px;
-    font-size: 14px;
+    font-size: 16px;
     color: #210e30;
     font-size: 18px;
   }

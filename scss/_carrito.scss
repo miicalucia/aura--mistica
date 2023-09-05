@@ -1,119 +1,134 @@
-nav {
-    font-size: 18px;
+header {
+    #carritoDeCompras {
 
+        button {
 
-        #carritoDeCompras {
+            #verCarrito {
+                background-color: #fff;
+                border: 0px;
+            }
+        }
 
-            #contenedorCarrito {
-                padding: 8px;
+        div {
+            div {
+                h2 {
+                    font-size: 26px;
+                }
+            }
+        }
 
-                div {
+        #contenedorCarrito {
+            padding: 8px;
 
-                    .cardCarrito {
+            div {
+
+                .cardCarrito {
+                    display: grid;
+                    grid-template-columns: 25% 75%;
+
+                    .imgCarrito {
+                        width: 80px;
+                        height: 80px;
+                        margin: 4px;
+                    }
+
+                    .cuerpoCard {
                         display: grid;
-                        grid-template-columns: 25% 75%;
+                        grid-template-columns: 35% 35% 10% 15%;
+                        align-items: center;
+                        gap: 2px;
+                        font-size: 16px;
 
-                        .imgCarrito {
-                            width: 80px;
-                            height: 80px;
-                            margin: 4px;
+                        h3 {
+                            padding: 8px;
                         }
 
-                        .cuerpoCard {
-                            display: grid;
-                            grid-template-columns: 35% 35% 10% 15%;
-                            align-items: center;
-                            gap: 2px;
+                        p {
+                            padding: 8px;
+                        }
 
-                            h3 {
-                                padding: 8px;
-                            }
+                        #botonCarrito {
+                            @include botones;
+                        }
 
-                            p {
-                                padding: 8px;
-                            }
-
-                            #botonCarrito {
-                                @include botones;
-                            }
-
-                            #botonCarrito:active {
-                                background-color: $detalles;
-                                color: $destacados;
-                            }
+                        #botonCarrito:active {
+                            background-color: $detalles;
+                            color: $destacados;
                         }
                     }
                 }
             }
+        }
 
-            #total {
-                display: flex;
-                justify-content: flex-end;
-                margin: 8px;
-                padding-right: 8px;
-            }
+        #total {
+            display: flex;
+            justify-content: flex-end;
+            margin: 8px;
+            padding-right: 8px;
+            font-size: 26px;
+        }
 
-            #vaciarCarrito {
-                @include botones;
-                margin: 8px;
-            }
+        #vaciarCarrito {
+            @include botones;
+            margin: 8px;
+        }
 
-            #vaciarCarrito:active {
-                background-color: $detalles;
-                color: $destacados;
-            }
+        #vaciarCarrito:active {
+            background-color: $detalles;
+            color: $destacados;
         }
     }
+}
 
 
 
 @media (min-width: 600px) and (max-width: 1023px) {
     nav {
-        
-            #carritoDeCompras {
-                button {
-                    #verCarrito {
-                        font-size: 32px;
-                        margin: 8px;
-                    }
+
+        #carritoDeCompras {
+            button {
+                #verCarrito {
+                    font-size: 32px;
+                    margin: 8px;
                 }
+            }
 
-                #contenedorCarrito {
-                    div {
-                        .cardCarrito {
+            #contenedorCarrito {
+                div {
+                    .cardCarrito {
 
-                            .cuerpoCard {
-                                display: grid;
-                                grid-template-columns: 35% 35% 10% 20%;
-                                align-items: center;
-                                gap: 2px;
-                            }
+                        .cuerpoCard {
+                            display: grid;
+                            grid-template-columns: 35% 35% 10% 20%;
+                            align-items: center;
+                            gap: 2px;
                         }
                     }
-
                 }
 
             }
 
         }
+
     }
+}
 
 
 @media (min-width: 1024px) {
 
 
-            #carritoDeCompras {
-                display: none;
-            }
+    #carritoDeCompras {
+        display: none;
+    }
 
-            #navbarNav {
-                ul {
-                    li {
-                        a {
-                            margin: 10px;
-                            font-size: 20px;
-                        }
-                    }
+    #navbarNav {
+        ul {
+            li {
+                a {
+                    margin: 10px;
+                    font-size: 20px;
                 }
             }
         }
+    }
+}
