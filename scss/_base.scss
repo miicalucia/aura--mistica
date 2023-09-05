@@ -9,6 +9,7 @@ html {
 
 body {
     font-family: $tipografiaCuerpo;
-    color: $anegro;
-    background-color: $fondolila;
+    color: $colorTipografia;
+    background-color: $background;
+    //overflow-x: hidden;
 }

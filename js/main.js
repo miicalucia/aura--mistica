@@ -1,3 +1,45 @@
+//NAVBAR
+
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
+const items = document.querySelector("#items");
+
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
+
+items.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
+
+//CARROUSEL
+
+const grande = document.querySelector('.grande');
+const punto = document.querySelectorAll('.punto');
+
+punto.forEach( ( cadaPunto , i ) => {
+    punto[i].addEventListener('click', () => {
+        
+        let posicion = i;
+        let operacion = posicion * -33;
+
+        grande.style.transform = `translateX(${ operacion }%)`;
+
+        punto.forEach( ( cadaPunto , i)  => {
+            punto[i].classList.remove('activo');
+        })
+        punto[i].classList.add('activo');
+
+    })
+})
+
+//SECCION PRODUCTOS
+
 class Producto {
     constructor(id, nombre, precio, img) {
         this.id = id;

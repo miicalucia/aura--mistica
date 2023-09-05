@@ -1,47 +1,188 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway&display=swap");
-nav {
-  font-size: 18px;
-}
-nav div #logoMarca {
+header {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
-nav div #logoMarca img {
-  width: 6rem;
-  height: 6rem;
+header img {
+  width: 5rem;
 }
-nav div #logoMarca h1 {
-  margin-left: 8px;
-  color: #210e30;
+header h1 {
   font-size: 32px;
   font-family: "Amatic SC", cursive;
 }
-nav div #carritoDeCompras #contenedorCarrito {
+header h1 a {
+  text-decoration: none;
+  color: #210e30;
+}
+header .abrirMenu,
+header .cerrarMenu {
+  background-color: transparent;
+  border: 0;
+  font-size: 2.3rem;
+  color: #210e30;
+}
+header .navLogo {
+  width: 3rem;
+}
+header .nav {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ede3f2;
+  padding: 3rem;
+  width: 60%;
+  height: 100vh;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+}
+header .nav .navList {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  list-style-type: none;
+  gap: 2rem;
+}
+header .nav .navList li a {
+  text-decoration: none;
+  color: #210e30;
+}
+header .nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0.5rem;
+    justify-content: center;
+  }
+  header .navLogo {
+    display: none;
+  }
+  header .abrirMenu,
+  header .cerrarMenu {
+    display: none;
+  }
+  header .nav {
+    opacity: 1;
+    visibility: visible;
+    position: inherit;
+    box-shadow: none;
+    padding: 1rem;
+    height: auto;
+    width: auto;
+  }
+  header .nav .navList {
+    flex-direction: row;
+    gap: 6rem;
+  }
+  header .nav .navList li {
+    margin: 8px;
+  }
+  header .nav .navList a:hover {
+    color: #52008d;
+    transition: 0.4s;
+  }
+}
+.carrousel {
+  width: 100%;
+  max-width: 120em;
+  margin-top: 16px;
+  overflow-x: hidden;
+  border-radius: 8px;
+  box-shadow: 3px 3px 60px #bebebe, 3px 3px 60px #ffffff;
+}
+.carrousel .grande {
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrousel .grande div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carrousel .grande div .img {
+  min-width: 90%;
+  width: calc(33.3333333333% - 2em);
+  min-height: 163px;
+  padding-top: 0.5em;
+  border-radius: 16px;
+}
+.carrousel .grande div h2 {
+  position: absolute;
+  top: 50%;
+  color: #ede3f2;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.puntos {
+  width: 100%;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.puntos .punto {
+  list-style-type: none;
+  width: 8px;
+  height: 8px;
+  margin: 8px;
+  border-radius: 50px;
+  background-color: #e0e0e0;
+  box-shadow: 3px 3px 5px #bebebe, -20px -20px 60px #ffffff;
+  background-color: #fff;
+}
+.puntos .punto.activo {
+  background-color: #c8add9;
+}
+
+nav {
+  font-size: 18px;
+}
+nav #carritoDeCompras #contenedorCarrito {
   padding: 8px;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito {
   display: grid;
   grid-template-columns: 25% 75%;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .imgCarrito {
   width: 80px;
   height: 80px;
   margin: 4px;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
   display: grid;
   grid-template-columns: 35% 35% 10% 15%;
   align-items: center;
   gap: 2px;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard h3 {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard h3 {
   padding: 8px;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard p {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard p {
   padding: 8px;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito {
   border-radius: 6px;
   background-color: #f6f1f9;
   border: solid #52008d 1px;
@@ -49,17 +190,17 @@ nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #boton
   font-size: 14px;
   color: #210e30;
 }
-nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito:active {
+nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard #botonCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
-nav div #carritoDeCompras #total {
+nav #carritoDeCompras #total {
   display: flex;
   justify-content: flex-end;
   margin: 8px;
   padding-right: 8px;
 }
-nav div #carritoDeCompras #vaciarCarrito {
+nav #carritoDeCompras #vaciarCarrito {
   border-radius: 6px;
   background-color: #f6f1f9;
   border: solid #52008d 1px;
@@ -68,57 +209,28 @@ nav div #carritoDeCompras #vaciarCarrito {
   color: #210e30;
   margin: 8px;
 }
-nav div #carritoDeCompras #vaciarCarrito:active {
+nav #carritoDeCompras #vaciarCarrito:active {
   background-color: #c8add9;
   color: #52008d;
 }
-nav div div div div h2 {
-  font-size: 22px;
-}
-nav div #navbarNav ul li a {
-  margin: 6px;
-}
 
 @media (min-width: 600px) and (max-width: 1023px) {
-  nav div #logoMarca img {
-    width: 6rem;
-    height: 6rem;
-  }
-  nav div #logoMarca h1 {
-    margin-left: 16px;
-    font-size: 45px;
-  }
-  nav div #carritoDeCompras button #verCarrito {
+  nav #carritoDeCompras button #verCarrito {
     font-size: 32px;
     margin: 8px;
   }
-  nav div #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+  nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
     display: grid;
     grid-template-columns: 35% 35% 10% 20%;
     align-items: center;
     gap: 2px;
   }
-  nav div button {
-    margin: 8px;
-  }
-  nav div button .navbar-toggler-icon {
-    width: 3rem;
-    height: 3rem;
-  }
 }
 @media (min-width: 1024px) {
-  nav div #logoMarca img {
-    width: 6rem;
-    height: 6rem;
-  }
-  nav div #logoMarca h1 {
-    margin-left: 16px;
-    font-size: 45px;
-  }
-  nav div #carritoDeCompras {
+  #carritoDeCompras {
     display: none;
   }
-  nav div #navbarNav ul li a {
+  #navbarNav ul li a {
     margin: 10px;
     font-size: 20px;
   }

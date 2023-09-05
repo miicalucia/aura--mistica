@@ -1,8 +1,14 @@
 @mixin botones {
         border-radius: 6px;
-        background-color: $fondolila;
-        border: solid $indigo 1px;
+        background-color: $background;
+        border: solid $destacados 1px;
         padding: 6px;
         font-size: 14px;
-        color: $anegro;
+        color: $colorTipografia;
+}
+
+@mixin neo {
+        border-radius: 8px;
+        box-shadow: 3px 3px 60px #bebebe,
+                3px 3px 60px #ffffff;
 }

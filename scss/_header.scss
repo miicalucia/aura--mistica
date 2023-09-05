@@ -1,0 +1,116 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    img {
+        width: 5rem;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-family: $tipografia;
+
+        a {
+            text-decoration: none;
+            color: $colorTipografia;
+        }
+    }
+
+    .abrirMenu,
+    .cerrarMenu {
+        background-color: transparent;
+        border: 0;
+        font-size: 2.3rem;
+        color: $colorTipografia;
+    }
+
+    .navLogo {
+        width: 3rem;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $titulosCarrusel;
+        padding: 3rem;
+        width: 60%;
+        height: 100vh;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+        .navList {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            list-style-type: none;
+            gap: 2rem;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $colorTipografia;
+                }
+            }
+        }
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (min-width:1024px) {
+
+    header {
+        padding: 0.5rem;
+        justify-content: center;
+
+        .navLogo {
+            display: none;
+        }
+
+        .abrirMenu,
+        .cerrarMenu {
+            display: none;
+        }
+
+        .nav {
+            opacity: 1;
+            visibility: visible;
+            position: inherit;
+            box-shadow: none;
+            padding: 1rem;
+            height: auto;
+            width: auto;
+
+            .navList {
+                flex-direction: row;
+                gap: 6rem;
+
+                li {
+                    margin: 8px;
+                }
+
+                a:hover {
+
+                    color: $destacados;
+                    transition: .4s;
+                }
+            }
+        }
+    }
+}
