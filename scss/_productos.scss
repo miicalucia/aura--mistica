@@ -80,7 +80,7 @@ main {
     }
 }
 
-#reforestacion {
+#playlist {
     margin: 16px;
     border-top: 1px solid $destacados;
     border-bottom: 1px solid $destacados;
@@ -109,7 +109,7 @@ main {
 @media (min-width: 600px) and (max-width: 1023px) {
     #contenedorProductos {
         h2 {
-            font-size: 32px;
+            font-size: 40px;
             margin: 24px auto;
         }
 
@@ -120,20 +120,36 @@ main {
         .card {
             padding: 16px;
 
+            .imgProductos {
+                margin: 8px;
+                justify-self: center;
+                width: 200px;
+                height: 200px;
+            }
+
             .cuerpoCard {
                 justify-self: center;
 
+                h3 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 24px;
+                }
+                button {
+                    font-size: 24px;
+                }
             }
         }
     }
 
-    #reforestacion {
+    #playlist {
         h2 {
-            font-size: 28px;
+            font-size: 32px;
         }
 
         iframe {
-            height: 40rem;
+            min-height: 40rem;
         }
     }
 }

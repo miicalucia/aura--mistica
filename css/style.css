@@ -66,6 +66,18 @@ header .nav.visible {
   visibility: visible;
 }
 
+@media (min-width: 600px) and (max-width: 1023px) {
+  header img {
+    width: 6rem;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  header .abrirMenu,
+  header .cerrarMenu {
+    font-size: 3.5rem;
+  }
+}
 @media (min-width: 1024px) {
   header {
     padding: 0.5rem;
@@ -154,6 +166,11 @@ header .nav.visible {
   background-color: #c8add9;
 }
 
+@media (min-width: 600px) and (max-width: 1023px) {
+  .carrousel .grande div h2 {
+    font-size: 100px;
+  }
+}
 header #carritoDeCompras button #verCarrito {
   background-color: #fff;
   border: 0px;
@@ -220,11 +237,11 @@ header #carritoDeCompras #vaciarCarrito:active {
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
-  nav #carritoDeCompras button #verCarrito {
+  header #carritoDeCompras button #verCarrito {
     font-size: 32px;
     margin: 8px;
   }
-  nav #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
+  header #carritoDeCompras #contenedorCarrito div .cardCarrito .cuerpoCard {
     display: grid;
     grid-template-columns: 35% 35% 10% 20%;
     align-items: center;
@@ -241,9 +258,9 @@ header #carritoDeCompras #vaciarCarrito:active {
   }
 }
 footer {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/sahumerio.jpg);
-  background-repeat: round;
-  color: #c8add9;
+  background-color: #c8add9;
+  margin-top: 8px;
+  color: #210e30;
 }
 footer h3 {
   padding: 6px;
@@ -257,13 +274,17 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
-  color: #c8add9;
+  color: #210e30;
 }
 footer .redesSociales {
   display: grid;
 }
 footer p {
   text-align: center;
+}
+footer p a {
+  text-decoration: none;
+  color: #210e30;
 }
 
 body #Whatsapp a {
@@ -279,20 +300,24 @@ body #Whatsapp a {
 
 @media (min-width: 600px) and (max-width: 1023px) {
   footer {
-    height: 224px;
+    height: 40vh;
   }
   footer h3 {
     padding: 16px;
-    font-size: 24px;
+    font-size: 32px;
   }
   footer ul {
     padding: 16px;
   }
+  footer ul li {
+    padding: 8px;
+  }
   footer ul li a {
-    font-size: 18px;
+    font-size: 22px;
   }
   footer p {
     padding: 10px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -380,7 +405,7 @@ main div div h2 {
   color: #52008d;
 }
 
-#reforestacion {
+#playlist {
   margin: 16px;
   border-top: 1px solid #52008d;
   border-bottom: 1px solid #52008d;
@@ -388,24 +413,24 @@ main div div h2 {
   flex-direction: column;
   align-items: center;
 }
-#reforestacion h2 {
+#playlist h2 {
   margin: 16px 0px;
   padding: 8px;
   font-size: 20px;
   font-weight: bold;
 }
-#reforestacion p {
+#playlist p {
   text-align: center;
   font-size: 18px;
 }
-#reforestacion iframe {
+#playlist iframe {
   margin: 16px 0px;
   width: 100%;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
   #contenedorProductos h2 {
-    font-size: 32px;
+    font-size: 40px;
     margin: 24px auto;
   }
   #contenedorProductos p {
@@ -414,14 +439,29 @@ main div div h2 {
   #contenedorProductos .card {
     padding: 16px;
   }
+  #contenedorProductos .card .imgProductos {
+    margin: 8px;
+    justify-self: center;
+    width: 200px;
+    height: 200px;
+  }
   #contenedorProductos .card .cuerpoCard {
     justify-self: center;
   }
-  #reforestacion h2 {
-    font-size: 28px;
+  #contenedorProductos .card .cuerpoCard h3 {
+    font-size: 24px;
   }
-  #reforestacion iframe {
-    height: 40rem;
+  #contenedorProductos .card .cuerpoCard p {
+    font-size: 24px;
+  }
+  #contenedorProductos .card .cuerpoCard button {
+    font-size: 24px;
+  }
+  #playlist h2 {
+    font-size: 32px;
+  }
+  #playlist iframe {
+    min-height: 40rem;
   }
 }
 @media (min-width: 1024px) {
