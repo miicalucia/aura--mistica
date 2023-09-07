@@ -27,7 +27,7 @@ punto.forEach( ( cadaPunto , i ) => {
     punto[i].addEventListener('click', () => {
         
         let posicion = i;
-        let operacion = posicion * -33;
+        let operacion = posicion * -33.333;
 
         grande.style.transform = `translateX(${ operacion }%)`;
 

@@ -27,9 +27,6 @@ header .cerrarMenu {
   font-size: 2.3rem;
   color: #210e30;
 }
-header .navLogo {
-  width: 3rem;
-}
 header .nav {
   opacity: 0;
   visibility: hidden;
@@ -81,10 +78,18 @@ header .nav.visible {
 @media (min-width: 1024px) {
   header {
     padding: 0.5rem;
-    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "marca menu carrito";
   }
-  header .navLogo {
+  header img {
     display: none;
+  }
+  header h1 {
+    grid-area: marca;
+    margin-left: 16px;
   }
   header .abrirMenu,
   header .cerrarMenu {
@@ -95,13 +100,15 @@ header .nav.visible {
     visibility: visible;
     position: inherit;
     box-shadow: none;
-    padding: 1rem;
+    padding: 8px;
     height: auto;
     width: auto;
+    background-color: #fff;
+    grid-area: menu;
   }
   header .nav .navList {
     flex-direction: row;
-    gap: 6rem;
+    gap: 10rem;
   }
   header .nav .navList li {
     margin: 8px;
@@ -113,7 +120,6 @@ header .nav.visible {
 }
 .carrousel {
   width: 100%;
-  max-width: 120em;
   overflow-x: hidden;
 }
 .carrousel .grande {
@@ -169,6 +175,11 @@ header .nav.visible {
 @media (min-width: 600px) and (max-width: 1023px) {
   .carrousel .grande div h2 {
     font-size: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .carrousel .grande div h2 {
+    font-size: 120px;
   }
 }
 header #carritoDeCompras button #verCarrito {
@@ -249,12 +260,8 @@ header #carritoDeCompras #vaciarCarrito:active {
   }
 }
 @media (min-width: 1024px) {
-  #carritoDeCompras {
-    display: none;
-  }
-  #navbarNav ul li a {
-    margin: 10px;
-    font-size: 20px;
+  header #carritoDeCompras {
+    grid-area: carrito;
   }
 }
 footer {
@@ -510,25 +517,21 @@ main div div h2 {
     background-color: #c8add9;
     color: #52008d;
   }
-  #reforestacion {
+  #playlist {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "proyecto video" "descripcion video";
+    grid-template-areas: "titulo playlist" "texto playlist";
     justify-items: center;
   }
-  #reforestacion h2 {
-    grid-area: proyecto;
-    font-size: 30px;
+  #playlist h2 {
+    font-size: 35px;
+    grid-area: titulo;
   }
-  #reforestacion p {
-    grid-area: descripcion;
-    font-size: 22px;
-    padding: 8px;
+  #playlist p {
+    grid-area: texto;
+    max-width: 50vw;
   }
-  #reforestacion iframe {
-    grid-area: video;
-    width: 440px;
-    height: 245px;
+  #playlist iframe {
+    grid-area: playlist;
   }
 }
 * {

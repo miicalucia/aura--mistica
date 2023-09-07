@@ -31,10 +31,6 @@ header {
         color: $colorTipografia;
     }
 
-    .navLogo {
-        width: 3rem;
-    }
-
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -97,10 +93,20 @@ header {
 
     header {
         padding: 0.5rem;
-        justify-content: center;
+        background-color: #fff;
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-areas:
+        "marca menu carrito";
 
-        .navLogo {
+        img {
             display: none;
+        }
+
+        h1 {
+            grid-area: marca;
+            margin-left: 16px;
         }
 
         .abrirMenu,
@@ -113,20 +119,21 @@ header {
             visibility: visible;
             position: inherit;
             box-shadow: none;
-            padding: 1rem;
+            padding: 8px;
             height: auto;
             width: auto;
+            background-color: #fff;
+            grid-area: menu;
 
             .navList {
                 flex-direction: row;
-                gap: 6rem;
+                gap: 10rem;
 
                 li {
                     margin: 8px;
                 }
 
                 a:hover {
-
                     color: $destacados;
                     transition: .4s;
                 }

@@ -1,6 +1,5 @@
 .carrousel {
     width: 100%;
-    max-width: 120em;
     overflow-x: hidden;
 
     .grande {
@@ -68,6 +67,21 @@
             div {
                 h2 {
                     font-size: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .carrousel {
+
+        .grande {
+            
+            div {
+                
+                h2 {
+                    font-size: 120px;
                 }
             }
         }

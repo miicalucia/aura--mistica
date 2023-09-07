@@ -116,19 +116,10 @@ header {
 
 @media (min-width: 1024px) {
 
-
+header {
     #carritoDeCompras {
-        display: none;
+        grid-area: carrito;
     }
 
-    #navbarNav {
-        ul {
-            li {
-                a {
-                    margin: 10px;
-                    font-size: 20px;
-                }
-            }
-        }
-    }
+}
 }

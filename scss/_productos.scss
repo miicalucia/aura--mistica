@@ -209,30 +209,25 @@ main {
         }
     }
 
-    #reforestacion {
+    #playlist {
         display: grid;
-        grid-template-columns: 50% 50%;
         grid-template-areas: 
-        "proyecto video"
-        "descripcion video";
+        "titulo playlist"
+        "texto playlist";
         justify-items: center;
 
         h2 {
-            grid-area: proyecto;
-            font-size: 30px;
+            font-size: 35px;
+            grid-area: titulo;
         }
 
         p {
-            grid-area: descripcion;
-            font-size: 22px;
-            padding: 8px;   
-            
+            grid-area: texto;
+            max-width: 50vw;
         }
 
         iframe {
-            grid-area: video;
-            width: 440px;
-            height: 245px;
+            grid-area: playlist;
         }
     }
 }
