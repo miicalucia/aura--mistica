@@ -368,6 +368,7 @@ main div div h2 {
 #contenedorProductos {
   display: grid;
   gap: 2px;
+  grid-template-columns: 50% 50%;
   grid-template-areas: "titulo titulo" "envio envio" "card card";
 }
 #contenedorProductos h2 {
@@ -547,6 +548,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #210e30;
   background-color: #f6f1f9;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

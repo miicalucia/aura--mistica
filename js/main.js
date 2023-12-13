@@ -96,7 +96,7 @@ const mostrarProductos = () => {
                     y: 10
                 },
                 style: {
-                    background: "#c8add9",
+                    background: "#ede3f2",
                     color: "#52008d",
                     opacity: 10,
                 },
@@ -190,10 +190,15 @@ const eliminarTodo = () => {
 const total = document.getElementById("total");
 
 const calcularTotal = () => {
-   // let envioGratis = 5000;
     let totalCompra = 0;
     carrito.forEach(producto => {
         totalCompra += producto.precio * producto.cantidad;
     })
     total.innerHTML = `Total: $${totalCompra}`;
 }
+
+//Pagar
+
+const pagar = document.getElementById("pagar");
+
+
